@@ -1,0 +1,48 @@
+
+class Cart():
+    
+    def __init__(self, wheels, capacity, items):
+        self.wheels = wheels
+        self.capacity = capacity
+        self.items = items
+        
+    def shoppingCartAdd(self):
+        z = input("what would you like to add?")
+        self.items.append(z)
+    def ShoppingCartRemove(self):
+        q =  input('What would you like to remove?')
+        if q in self.items:
+            self.items.remove(q)
+        else:
+            print ('That item is not in your cart')
+    def ShoppingCartShow(self):
+        for item in self.items:
+            print(item) 
+            
+coolShoppingCart = Cart(4, 15, [])
+
+def run():
+    while True:
+        response = input("What would you like to do? Add, show, or quit?")
+        if response.lower() == 'quit':
+            print("Thanks for shopping here's your cart")
+            coolShoppingCart.ShoppingCartShow()
+            break
+            
+        elif response.lower() == 'add':
+            coolShoppingCart.shoppingCartAdd()
+            
+        elif response.lower() == 'remove':
+            coolShoppingcart.ShoppingCartRemove()
+
+        elif response.lower() == 'show':
+            coolShoppingCart.ShoppingCartShow()
+            
+        elif response.lower() == 'clear':
+            CoolShoppingCart.clearCart()
+            
+        else:
+            print("Sorry not a valid response - Please choose add/remove/clear/show or quit")
+run()
+            
+ 
