@@ -1,0 +1,87 @@
+#Shopping Cart program:
+
+
+class Cart():
+    
+    def __init__(self, wheels, capacity, items):
+        self.wheels = wheels
+        self.capacity = capacity
+        self.items = items
+        
+    def shoppingCartAdd(self):
+        z = input("what would you like to add?")
+        self.items.append(z)
+    def ShoppingCartRemove(self):
+        q =  input('What would you like to remove?')
+        if q in self.items:
+            self.items.remove(q)
+        else:
+            print ('That item is not in your cart')
+    def ShoppingCartShow(self):
+        for item in self.items:
+            print(item) 
+            
+coolShoppingCart = Cart(4, 15, [])
+
+def run():
+    while True:
+        response = input("What would you like to do? Add, show, or quit?")
+        if response.lower() == 'quit':
+            print("Thanks for shopping here's your cart")
+            coolShoppingCart.ShoppingCartShow()
+            break
+            
+        elif response.lower() == 'add':
+            coolShoppingCart.shoppingCartAdd()
+            
+        elif response.lower() == 'remove':
+            coolShoppingcart.ShoppingCartRemove()
+
+        elif response.lower() == 'show':
+            coolShoppingCart.ShoppingCartShow()
+            
+        elif response.lower() == 'clear':
+            CoolShoppingCart.clearCart()
+            
+        else:
+            print("Sorry not a valid response - Please choose add/remove/clear/show or quit")
+run()
+
+#'Strings' Program:
+
+class StringMakingRobot():
+    
+    def __init__(self, height, weight, strings):
+        self.height = height
+        self.weight = weight
+        self.strings = strings
+        
+    def getString(self):
+        a = input('type some words here')
+        self.strings.append(a)
+        print('Thanks for your input!')
+    def printString(self):
+        b = input('type some words here and they will come out in ALL CAPS!!')
+        c = b.upper()
+        print(c)
+        
+robotOne = StringMakingRobot(24, 34, [])
+
+def runIt():
+    while True:
+        answer = input('What would you like to do? A: quit B: input some text C: get back your text in ALL CAPS? ')
+        if answer.lower() == 'a':
+            print('Thanks for playing have a nice day!')
+            break 
+        
+        elif answer.lower() == 'b':
+            robotOne.getString()
+                       
+        elif answer.lower() == 'c':
+            robotOne.printString()
+        else:
+            print('not a valid option')
+                       
+runIt()
+            
+ 
