@@ -1,0 +1,34 @@
+class StringMakingRobot():
+    
+    def __init__(self, height, weight, strings):
+        self.height = height
+        self.weight = weight
+        self.strings = strings
+        
+    def getString(self):
+        a = input('type some words here')
+        self.strings.append(a)
+        print('Thanks for your input!')
+    def printString(self):
+        b = input('type some words here and they will come out in ALL CAPS!!')
+        c = b.upper()
+        print(c)
+        
+robotOne = StringMakingRobot(24, 34, [])
+
+def runIt():
+    while True:
+        answer = input('What would you like to do? A: quit B: input some text C: get back your text in ALL CAPS? ')
+        if answer.lower() == 'a':
+            print('Thanks for playing have a nice day!')
+            break 
+        
+        elif answer.lower() == 'b':
+            robotOne.getString()
+                       
+        elif answer.lower() == 'c':
+            robotOne.printString()
+        else:
+            print('not a valid option')
+                       
+runIt()
