@@ -1,0 +1,8 @@
+import re
+with open('regex_test.txt') as w:
+    output = w.read()
+print(output)
+
+wern = re.compile('\s(?<!\n)[A-Z][a-z]+')
+bern = wern.findall(output)
+print(bern)
